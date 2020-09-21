@@ -1,5 +1,5 @@
 {
-  "name": "react-giphy-selector-bago",
+  "name": "@bago2k4/react-giphy-selector",
   "version": "0.0.7",
   "description": "A search & select React.JS component for picking the perfect giphy.",
   "main": "lib/index.js",
