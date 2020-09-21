@@ -1,7 +1,7 @@
 module.exports = {
   entry: "./src/index.ts",
 
-  mode: "production",
+  mode: "development",
 
   output: {
     filename: "index.js",

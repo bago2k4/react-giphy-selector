@@ -1,5 +1,5 @@
 {
-  "name": "@bago2k4/react-giphy-selector",
+  "name": "react-giphy-selector-bago",
   "version": "0.0.7",
   "description": "A search & select React.JS component for picking the perfect giphy.",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
     "css-loader": "^4.3.0",
     "file-loader": "^1.1.6",
     "prettier": "^1.19.1",
-    "react-dom": "16.11.0",
+    "react-dom": "^16.11.0",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.19.1",
     "typescript": "~4.0.2",
@@ -41,7 +41,6 @@
     "@types/react": "^16.9.49",
     "classnames": "^2.2.5",
     "giphy-js-sdk-core": "^1.0.6",
-    "react": "16.11.0",
-    "react-is": "^16.11.0"
+    "react": "^16.11.0"
   }
 }
