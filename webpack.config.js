@@ -1,8 +1,6 @@
 module.exports = {
   entry: "./src/index.ts",
 
-  mode: "development",
-
   output: {
     filename: "index.js",
     path: __dirname + "/lib/",
