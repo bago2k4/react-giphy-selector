@@ -24,12 +24,6 @@ module.exports = {
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
 
-      // All css files should be passed through 'style-loader' and 'css-loader'
-      {
-        test: /\.css$/,
-        loader: ["style-loader", "css-loader?sourceMap&modules"]
-      },
-
       // Load png files via 'url-loader'
       {
         test: /\.png$/,

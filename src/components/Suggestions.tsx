@@ -1,19 +1,12 @@
 import * as React from "react";
-import * as cn from "classnames";
 
 import { Suggestion } from "./Suggestion";
-
-declare var require: any
-
-const defaultStyle = require("./Suggestions.css");
 
 export interface ISuggestionsProps {
   suggestions: string[];
   onSuggestionSelected: (q: string) => void;
   suggestionsClassName?: string;
-  suggestionsStyle: object;
   suggestionClassName?: string;
-  suggestionStyle: object;
 }
 
 export class Suggestions extends React.Component<ISuggestionsProps, {}> {
@@ -26,15 +19,12 @@ export class Suggestions extends React.Component<ISuggestionsProps, {}> {
       suggestions,
       onSuggestionSelected,
       suggestionClassName,
-      suggestionStyle,
-      suggestionsClassName,
-      suggestionsStyle
+      suggestionsClassName
     } = this.props;
 
     return (
       <div
-        style={suggestionsStyle}
-        className={cn(defaultStyle.suggestions, suggestionsClassName)}
+        className={suggestionsClassName}
       >
         {suggestions.map((s: string) => (
           <Suggestion
@@ -42,7 +32,6 @@ export class Suggestions extends React.Component<ISuggestionsProps, {}> {
             suggestion={s}
             onSelected={onSuggestionSelected}
             suggestionClassName={suggestionClassName}
-            suggestionStyle={suggestionStyle}
           />
         ))}
       </div>
