@@ -2,6 +2,9 @@ import * as React from "react";
 import * as cn from "classnames";
 
 import { IGifObject, IGifImage } from "../types";
+
+declare var require: any
+
 const defaultStyle = require("./SearchResult.css");
 
 export interface ISearchResultProps {

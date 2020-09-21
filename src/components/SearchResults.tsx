@@ -3,6 +3,9 @@ import * as cn from "classnames";
 
 import { IGifObject } from "../types";
 import { SearchResult } from "./SearchResult";
+
+declare var require: any
+
 const defaultStyle = require("./SearchResults.css");
 
 export interface ISearchResultsProps {

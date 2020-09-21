@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as cn from "classnames";
 
+declare var require: any
+
 const defaultStyle = require("./Suggestion.css");
 
 export interface ISuggestionProps {

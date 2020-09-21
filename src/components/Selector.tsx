@@ -6,6 +6,9 @@ import { GiphyClient, ISearchResult } from "../lib/GiphyClient";
 import { QueryForm } from "./QueryForm";
 import { Suggestions } from "./Suggestions";
 import { SearchResults } from "./SearchResults";
+
+declare var require: any
+
 const defaultStyle = require("./Selector.css");
 const attributionMark = require("../img/PoweredBy_200px-White_HorizText.png");
 
