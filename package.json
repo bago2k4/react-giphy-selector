@@ -6,10 +6,9 @@
   "typings": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack",
-    "build-example": "./node_modules/.bin/webpack --config example/webpack.config.js",
-    "format": "./node_modules/.bin/prettier es5 --write \"{{src,example/src}/**/*.{js,ts,tsx},webpack.config.js}\"",
-    "prepublish": "npm run build"
+    "build": "npx webpack-cli",
+    "format": "npx prettier es5 --write \"{{src,example/src}/**/*.{js,ts,tsx},webpack.config.js}\"",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,7 +29,8 @@
     "source-map-loader": "^0.2.3",
     "typescript": "^2.6.2",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@types/react": "^16.0.33",
