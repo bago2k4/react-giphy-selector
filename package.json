@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "@types/react": "^16.0.33",
-    "giphy-js-sdk-core": "^1.0.2",
+    "giphy-js-sdk-core": "^1.0.6",
+    "node-fetch": "^2.6.1",
     "react": "^16.2.0"
   }
 }
