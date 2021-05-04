@@ -21,13 +21,14 @@
   },
   "homepage": "https://github.com/bago2k4/react-giphy-selector#readme",
   "devDependencies": {
+    "@types/node": "^11.15.53",
     "@types/react-dom": "^16.0.3",
     "awesome-typescript-loader": "^3.4.1",
     "file-loader": "^1.1.6",
     "prettier": "^1.9.2",
     "react-dom": "^16.2.0",
     "source-map-loader": "^0.2.3",
-    "typescript": "^2.6.2",
+    "typescript": "^3.9.9",
     "url-loader": "^0.6.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
