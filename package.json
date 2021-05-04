@@ -6,8 +6,11 @@
   "typings": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack-cli",
-    "format": "npx prettier es5 --write \"{{src,example/src}/**/*.{js,ts,tsx},webpack.config.js}\"",
+    "start": "webpack-cli serve --open --config webpack.dev.js",
+    "build": "npx webpack-cli --config webpack.prod.js",
+    "build-example": "webpack-cli --config example/webpack.config.js",
+    "start-example": "webpack-cli serve --open --config example/webpack.config.js",
+    "format": "npx prettier es5 --write \"{{src,example/src}/**/*.{js,ts,tsx},webpack.prod.js}\"",
     "prepare": "npm run build"
   },
   "repository": {
@@ -23,18 +26,27 @@
   "devDependencies": {
     "@types/node": "^11.15.53",
     "@types/react-dom": "^16.0.3",
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^0.28.11",
+    "csv-loader": "^2.1.1",
+    "express": "^4.15.3",
     "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^5.3.1",
     "prettier": "^1.9.2",
     "react-dom": "^16.2.0",
     "source-map-loader": "^0.2.3",
+    "style-loader": "^0.19.1",
     "typescript": "^3.9.9",
     "url-loader": "^0.6.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^4.1.0",
+    "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "@types/react": "^16.0.33",
+    "@types/react": "^16.14.6",
     "giphy-js-sdk-core": "^1.0.6",
     "node-fetch": "^2.6.1",
     "react": "^16.2.0"

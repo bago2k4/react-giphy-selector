@@ -1,16 +1,21 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: "./src/index.ts",
-  mode: "production",
+  
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'React Giphy Selector',
+    }),
+  ],
 
   output: {
-    filename: "index.js",
-    path: __dirname + "/lib/",
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     library: "ReactGiphySelector",
     libraryTarget: "umd"
   },
-
-  // Enable sourcemaps for debugging webpack's output.
-  devtool: "source-map",
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
@@ -24,13 +29,6 @@ module.exports = {
 
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-
-      // Load png files via 'url-loader'
-      {
-        test: /\.png$/,
-        loader: "url-loader",
-        query: { mimetype: "image/png" }
-      }
     ]
   }
 };
